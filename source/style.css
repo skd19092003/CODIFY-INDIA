@@ -1,0 +1,163 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    image-rendering: pixelated;
+    /* Prevent scrollbars from appearing */
+}
+
+/* Background Video */
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Cover the entire viewport height */
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.85;
+}
+
+/* Audio (Hidden) */
+audio {
+    visibility: hidden;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-align: center;
+   
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-size: 1.1em;
+}
+
+nav li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+}
+
+nav a:hover {
+    background-color: rgba(152, 118, 221, 0.815);
+    border-radius: 5px;
+}
+
+/* Content Styling */
+.content {
+    text-align: center;
+    color: white;
+    padding-top: 80px; /* Add padding to push content below the fixed navbar */
+}
+
+.content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.content h2 {
+    font-size: 1.5em;
+    margin-bottom: 100px;
+    background-color: rgba(0, 0, 0, 0.399);
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Options Section */
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* Add spacing between buttons */
+}
+a{
+    text-decoration: none;
+}
+a button {
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+button {
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+    height: 180px;
+    width: 200px; /* Fixed width for buttons */
+    border: 1px solid rgba(255, 255, 255, 0.705);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    transition: opacity 0.3s, box-shadow 0.3s;
+   
+}
+
+button:hover {
+    opacity: 1;
+    box-shadow: 5px 5px 5px black;
+}
+
+button img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+    object-fit: cover;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .content h1 {
+        font-size: 2em;
+    }
+
+    .content h2 {
+        font-size: 1.2em;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    button {
+        width: 90%; /* Adjust width for smaller screens */
+        max-width: 300px; /* Ensure buttons don't get too large */
+    }
+}

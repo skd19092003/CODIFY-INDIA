@@ -1,0 +1,411 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(40%);
+}
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.logo {
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: bolder;
+
+    color: rgb(0, 255, 191);
+}
+
+header nav ul li a:hover {
+    color: #bbff00;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 20px;
+    text-align: center;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.intro {
+    margin-bottom: 40px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.intro h1 span {
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 200, 255, 0.122);
+    font-size: 2em;
+    font-weight: 1000;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px #000;
+}
+
+.intro p {
+    font-size: 1.5em;
+    color: #FDDF14;
+    line-height: 35px;
+    text-shadow: 1px 1px #000;
+    transition: opacity 0.5s ease;
+}
+
+#intro-content {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+#intro-content.expanded {
+    max-height: 1000px; 
+    opacity: 1;
+}
+
+button {
+    background-color: #ff9500;
+    color: #000000;
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 10px;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+button:hover {
+    background-color: #00e60a;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px 0px #00ff0d;
+}
+
+.read-more {
+    background-color: #FDDF14;
+    color: #000;
+    margin-top: 20px;
+}
+
+.read-more:hover {
+    background-color: #FDCB14;
+}
+
+#basics, #topics, #study-method, #notes-method, .lectures-method {
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#basics h2 span {
+    color: rgb(0, 200, 255);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-shadow: 2px 2px #000;
+}
+
+#basics p {
+    color: #FDCB14;
+    font-size: 1.35em;
+    margin-bottom: 20px;
+}
+
+.tutor-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tutor-card {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px #00ff0d;
+}
+
+.tutor-card:hover {
+    transform: scale(1.05);
+}
+
+.tutor-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.tutor-card button {
+    background-color: #FDDF14;
+    color: #000;
+}
+
+.tutor-card button:hover {
+    background-color: #FDCB14;
+}
+
+.iframe-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+iframe {
+    width: 80%;
+    height: 80vh;
+    border: none;
+    background-color: wheat;
+    margin-bottom: 50px;
+}
+
+.rating-comment-section {
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.star-rating {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.star-rating i {
+    font-size: 2em;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.star-rating i:hover,
+.star-rating i:hover ~ i,
+.star-rating i.selected,
+.star-rating i.selected ~ i {
+    color: #FFD700;
+}
+
+textarea#comment {
+    color: #000;
+}
+
+textarea#name {
+    color: #000;
+}
+
+#cmnrt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#review-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#review-form textarea,
+#review-form input {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+#review-form button {
+    margin-top: 10px;
+    background-color: #00e60a;
+    color: #000;
+    font-size: 1em;
+}
+
+#reviews-container {
+    width: 80%;
+    margin-top: 20px;
+}
+
+.review {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.review .rating {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.review .rating i {
+    font-size: 1em;
+    color: #FFD700;
+}
+
+.review .comment {
+    font-size: 1em;
+}
+
+.review .name {
+    font-size: 0.8em;
+    text-align: right;
+    margin-top: 5px;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 700px) {
+    header, footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+    header div.logo{
+        font-size: 1.6em;
+        font-weight: bolder;
+        margin-bottom: 20px;
+        
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header nav ul li a {
+        font-size: 1.1em;
+        font-weight: bolder;
+        color: rgb(0, 255, 191);
+
+
+    }
+
+    footer {
+        text-align: left;
+        padding: 10px;
+    }
+
+    main {
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding: 10px;
+    }
+
+    .intro h1 span {
+        font-size: 1.3em;
+    }
+
+    .intro p {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
+    button {
+        font-size: 1.2em;
+        padding: 8px 16px;
+    }
+
+    .tutor-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tutor-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 60vh;
+    }
+
+    .star-rating i {
+        font-size: 1.5em;
+    }
+
+    #review-form textarea, 
+    #review-form input {
+        width: 100%;
+    }
+
+    #reviews-container {
+        width: 100%;
+    }
+
+    .review {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .review .rating i {
+        font-size: 1em;
+    }
+
+    .review .comment, 
+    .review .name {
+        font-size: 0.8em;
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codify Learning</title>
+    <link rel="stylesheet" href="/Codify/CSS/codify.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <video autoplay muted loop>
+        <source src="/Codify/ASSETS/bgspace.mp4" type="video/mp4">
+    </video>
+    <header>
+        <div class="logo">Codify</div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/game layout/game.html">Gaming</a></li>
+                <li><a href="/source/source.html">Gaming library</a></li>
+                <li><a href="/aboutus/ABOUT.HTML">About</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="intro">
+            <h1><span>Welcome to Codify Learning</span></h1>
+            <p id="intro-content">
+                Codify Learning is an innovative platform designed to make learning web development fun and interactive. Here, you can start from the basics and advance to more complex topics with ease. Our mission is to provide you with the best resources and an engaging learning experience.
+            </p>
+            <button id="read-more-btn" class="read-more">Read About us</button>
+        </div>
+        <button id="start-learning-btn" class="start-learning">Start Learning</button>
+
+        <div id="basics" class="hidden">
+            <h2><span>Basics of Web Development</span></h2>
+            <p>Web development is the process of creating and maintaining websites and web applications. It involves a combination of various technologies and practices to build, design, and optimize websites for performance and user experience. The fundamental technologies used in web development are HTML (Hypertext Markup Language), CSS (Cascading Style Sheets), and JavaScript.</p>
+            <button id="next-to-topics-btn">Next</button>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="topics" class="hidden">
+            <h2>Select a Topic</h2>
+            <button class="topic-btn" data-topic="html">HTML</button>
+            <button class="topic-btn" data-topic="css">CSS</button>
+            <button class="topic-btn" data-topic="javascript">JavaScript</button>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="study-method" class="hidden">
+            <h2>Select Study Method</h2>
+            <button class="study-btn" data-method="notes">Notes</button>
+            <button class="study-btn" data-method="lectures">Lectures</button>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="notes-method" class="hidden">
+            <h2>Select Tutor</h2>
+            <div class="tutor-cards">
+                <div class="tutor-card" data-tutor="cwh">
+                    <h3>Code with Harry</h3>
+                    <button class="select-tutor-btn">Select</button>
+                </div>
+                <div class="tutor-card" data-tutor="apna">
+                    <h3>Apna College</h3>
+                    <button class="select-tutor-btn">Select</button>
+                </div>
+                <div class="tutor-card" data-tutor="pw-skills">
+                    <h3>PW Skills</h3>
+                    <button class="select-tutor-btn">Select</button>
+                </div>
+                <div class="tutor-card" data-tutor="documentation">
+                    <h3>Documentation</h3>
+                    <button class="select-tutor-btn">Select</button>
+                </div>
+            </div>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="notes-content" class="hidden">
+            <h2>Notes</h2>
+            <button id="view-notes-btn">View Notes</button>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="select-language" class="hidden">
+            <h2>Select Language</h2>
+            <button class="language-btn" data-language="english">English</button>
+            <button class="language-btn" data-language="hindi">Hindi</button>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="english-channels" class="hidden">
+            <h2>Select Channel</h2>
+            <button class="english-channel-btn" data-channel="freecodecamp">FreeCodeCamp</button>
+            <button class="english-channel-btn" data-channel="brocode">BroCode</button>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="hindi-channels" class="hidden">
+            <h2>Select Channel</h2>
+            <button class="hindi-channel-btn" data-channel="chai-aur-code">Chai Aur Code</button>
+            <button class="hindi-channel-btn" data-channel="code-with-harry">Code With Harry</button>
+            <button class="hindi-channel-btn" data-channel="apna-college">Apna College</button>
+            <button class="hindi-channel-btn" data-channel="pw-skills">PW Skills</button>
+            <button class="go-back-btn hidden">Go Back</button>
+        </div>
+
+        <div id="lecture-section" class="hidden">
+            <button id="view-lecture-btn" class="hidden">View Lecture</button>
+            <button class="go-back-btn">Go Back</button>
+        </div>
+
+        <div class="iframe-container hidden">
+            <iframe id="lectures-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <button class="go-back-btn">Go Back</button>
+        </div>
+
+        <div class="rating-comment-section hidden">
+            <h2>Rate and Comment</h2>
+            <div class="star-rating">
+                <i class="fa fa-star" data-value="1"></i>
+                <i class="fa fa-star" data-value="2"></i>
+                <i class="fa fa-star" data-value="3"></i>
+                <i class="fa fa-star" data-value="4"></i>
+                <i class="fa fa-star" data-value="5"></i>
+            </div>
+            <div id="cmnrt">
+                <form id="review-form">
+                    <input type="hidden" id="rating" name="rating">
+                    <textarea id="comment" name="comment" rows="4" cols="50" placeholder="Your comment" required></textarea>
+                    <textarea id="name" name="name" rows="1" cols="50" placeholder="Your Name Here...."></textarea>
+                    <button type="submit">Submit Review</button>
+                </form>
+                <div id="reviews-container"></div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Codify. All rights reserved.</p>
+    </footer>
+ 
+    <script src="/Codify/JS/learning.js"></script>
+</body>
+</html>

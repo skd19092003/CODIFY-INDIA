@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Games</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="nebula.mp4" type="video/mp4">
+    </video>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/aboutus/ABOUT.HTML">About Us</a></li>
+            <li><a href="/aboutus/ABOUT.HTML">Contact Us</a></li>
+            <li><a href="/index.html">More</a></li>
+        </ul>
+        <a href="/source/source.html" target="_blank"><button>Want to create these games<br>(CLICK HERE)</button></a>
+    </nav>
+
+    <div class="card-container">
+        <div class="section-heading">
+            <h2>Interactive Coding Games</h2>
+        </div>
+        <div class="cards">
+            <a href="../Flexy-fun-main/Flexy-fun/flexfun.html  " target="_blank" class="card">
+                <img src="flexy fun.jpg" alt="Flexy Fun">
+                <div class="card-content">
+                    <h3>Flexy Fun</h3>
+                    <div class="description">
+                        <p><span> Flexy Fun</span> <br>Welcome to Flexy-fun, a game where you help Froggy and friends by writing CSS code!</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="../Dinfun-main/Dinfun/Dinfun.html  " target="_blank" class="card">
+                <img src="dinfun.png" alt="Dinfun">
+                <div class="card-content">
+                    <h3>Dinfun</h3>
+                    <div class="description">
+                        <p><span> Dinfun</span> <br>You're about to play CSS Selectors! Selectors are how you pick which element to apply styles to.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="section-heading">
+            <h2>Enjoyable Games</h2>
+        </div>
+        <div class="cards">
+            <a href="../venocifer game/venocifer .html " target="_blank" class="card">
+                <img src="venocifer1.png" alt="Superwarrior vs Venocifer">
+                <div class="card-content">
+                    <h3>Superwarrior vs Venocifer</h3>
+                    <div class="description">
+                        <p><span> Superwarrior vs Venocifer</span> <br>A super-interactive action game in which you fight the dangerous Venocifer!</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="../Snake-game-main/SnakeGame/snake.html  " target="_blank" class="card">
+                <img src="snake.png" alt="Snake Adventure">
+                <div class="card-content">
+                    <h3>Snake Adventure</h3>
+                    <div class="description">
+                        <p><span>Snake Adventure</span>  <br>An interactive game where the snake eats everything that comes in its path.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="../tic tac toe/tictactoe.html  " target="_blank" class="card">
+                <img src="tic tac toe.jpeg" alt="Tic Tac Toe">
+                <div class="card-content">
+                    <h3>Tic Tac Toe</h3>
+                    <div class="description">
+                        <p><span>TIC TAC TOE</span>  <br>The evergreen Tic-Tac-Toe multiplayer game.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="../masterpiano/masterpiano.html " target="_blank" class="card">
+                <img src="MASTERPIANO.png" alt="Master Piano">
+                <div class="card-content">
+                    <h3>Master Piano</h3>
+                    <div class="description">
+                        <p><span> MATER PIANO</span> <br>Play the lovely Master Piano and create your own tunes.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach(card => {
+                card.addEventListener('mouseover', function() {
+                    const description = card.querySelector('.description');
+                    description.style.opacity = '1';
+                });
+
+                card.addEventListener('mouseout', function() {
+                    const description = card.querySelector('.description');
+                    description.style.opacity = '0';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
